@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FilmCell" id="gTV-IL-0wX" customClass="FilmCell" customModule="finalProject" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="167" height="304"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="167" height="304"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jEu-Uy-gXn">
+                        <rect key="frame" x="0.0" y="0.0" width="167" height="304"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wa2-K3-9rA">
+                                <rect key="frame" x="8" y="258.5" width="151" height="37.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="8bP-c2-SjJ">
+                                <rect key="frame" x="0.0" y="1" width="159" height="248"/>
+                                <color key="backgroundColor" systemColor="labelColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="8bP-c2-SjJ" secondAttribute="height" multiplier="2:3" constant="-8" id="H1P-1U-mkZ"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Psk-Ci-el5">
+                                <rect key="frame" x="117" y="210" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="8,9" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2lD-ch-tNC">
+                                        <rect key="frame" x="6" y="15" width="38" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" red="0.97050272380000002" green="0.96925901039999995" blue="0.99098358549999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Wa2-K3-9rA" firstAttribute="top" secondItem="8bP-c2-SjJ" secondAttribute="bottom" constant="8" id="8vH-y3-RSs"/>
+                            <constraint firstItem="8bP-c2-SjJ" firstAttribute="top" secondItem="jEu-Uy-gXn" secondAttribute="top" id="NTQ-Tb-Dty"/>
+                            <constraint firstAttribute="bottom" secondItem="Wa2-K3-9rA" secondAttribute="bottom" constant="8" id="UFa-HQ-6cf"/>
+                            <constraint firstItem="Wa2-K3-9rA" firstAttribute="leading" secondItem="jEu-Uy-gXn" secondAttribute="leading" constant="8" id="YQI-uy-cdA"/>
+                            <constraint firstAttribute="trailing" secondItem="Wa2-K3-9rA" secondAttribute="trailing" constant="8" id="dKX-1y-0Yo"/>
+                            <constraint firstAttribute="trailing" secondItem="8bP-c2-SjJ" secondAttribute="trailing" constant="8" id="omv-q7-NBT"/>
+                            <constraint firstItem="8bP-c2-SjJ" firstAttribute="leading" secondItem="jEu-Uy-gXn" secondAttribute="leading" id="sgN-Go-1jZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="jEu-Uy-gXn" secondAttribute="trailing" id="Aoo-dm-V4H"/>
+                <constraint firstItem="jEu-Uy-gXn" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EI7-ra-idR"/>
+                <constraint firstAttribute="bottom" secondItem="jEu-Uy-gXn" secondAttribute="bottom" id="FhR-dy-iTQ"/>
+                <constraint firstItem="jEu-Uy-gXn" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="tyM-hE-sU5"/>
+            </constraints>
+            <size key="customSize" width="167" height="304"/>
+            <connections>
+                <outlet property="backView" destination="jEu-Uy-gXn" id="BRA-0a-YyU"/>
+                <outlet property="imageOfFilm" destination="8bP-c2-SjJ" id="2rt-F2-zfZ"/>
+                <outlet property="nameOfFilm" destination="Wa2-K3-9rA" id="xzC-au-vAi"/>
+                <outlet property="rateOfFilm" destination="2lD-ch-tNC" id="UyZ-bQ-aJc"/>
+                <outlet property="rateView" destination="Psk-Ci-el5" id="h74-rx-0VB"/>
+            </connections>
+            <point key="canvasLocation" x="219.56521739130437" y="149.33035714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="folder.fill" catalog="system" width="128" height="97"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

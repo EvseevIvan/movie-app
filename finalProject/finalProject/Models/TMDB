@@ -1,0 +1,439 @@
+
+
+
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/mqsPyyeDCBAghXyjbw4TfEYwljw.jpg",
+            "id": 49046,
+            "title": "All Quiet on the Western Front",
+            "original_language": "de",
+            "original_title": "Im Westen nichts Neues",
+            "overview": "Paul Baumer and his friends Albert and Muller, egged on by romantic dreams of heroism, voluntarily enlist in the German army. Full of excitement and patriotic fervour, the boys enthusiastically march into a war they believe in. But once on the Western Front, they discover the soul-destroying horror of World War I.",
+            "poster_path": "/2IRjbi9cADuDMKmHdLK7LaqQDKA.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                18,
+                36,
+                10752
+            ],
+            "popularity": 224.582,
+            "release_date": "2022-10-07",
+            "video": false,
+            "vote_average": 7.92,
+            "vote_count": 250
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/yOg3dhozpoWzoNYA6fAfOIvEr3G.jpg",
+            "id": 766475,
+            "title": "See How They Run",
+            "original_language": "en",
+            "original_title": "See How They Run",
+            "overview": "In the West End of 1950s London, plans for a movie version of a smash-hit play come to an abrupt halt after a pivotal member of the crew is murdered. When world-weary Inspector Stoppard and eager rookie Constable Stalker take on the case, the two find themselves thrown into a puzzling whodunit within the glamorously sordid theater underground, investigating the mysterious homicide at their own peril.",
+            "poster_path": "/r3rpSAi2yukZwr9H2km0WKGODWo.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                9648,
+                53,
+                35
+            ],
+            "popularity": 24.031,
+            "release_date": "2022-09-09",
+            "video": false,
+            "vote_average": 6.726,
+            "vote_count": 146
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fvM3O9bJRjpz1WP9elLoxU2kGoN.jpg",
+            "id": 944864,
+            "title": "The Takeover",
+            "original_language": "nl",
+            "original_title": "The Takeover",
+            "overview": "Self-proclaimed ethical hacker Mel Bandison's life is turned upside down when she stops a data breach on a high-tech self-driving bus that also happens to shut down an international criminal network. She then becomes a target and is framed with a deepfake video that “shows” that she murders someone.",
+            "poster_path": "/rSwPRAMIvF58fu3FkY9ErB2W1eB.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "popularity": 28.056,
+            "release_date": "2022-11-01",
+            "video": false,
+            "vote_average": 6.2,
+            "vote_count": 2
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/67kTU8DU5YZYrBybH4gppqptZK9.jpg",
+            "id": 913290,
+            "title": "Barbarian",
+            "original_language": "en",
+            "original_title": "Barbarian",
+            "overview": "In town for a job interview, a young woman arrives at her Airbnb late at night only to find that it has been mistakenly double-booked and a strange man is already staying there. Against her better judgement, she decides to stay the night anyway, but soon discovers that there is much more to be afraid of in the house than the other guest.",
+            "poster_path": "/idT5mnqPcJgSkvpDX7pJffBzdVH.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                27,
+                9648,
+                53
+            ],
+            "popularity": 1262.649,
+            "release_date": "2022-09-08",
+            "video": false,
+            "vote_average": 7.052,
+            "vote_count": 423
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/bQXAqRx2Fgc46uCVWgoPz5L5Dtr.jpg",
+            "id": 436270,
+            "title": "Black Adam",
+            "original_language": "en",
+            "original_title": "Black Adam",
+            "overview": "Nearly 5,000 years after he was bestowed with the almighty powers of the Egyptian gods—and imprisoned just as quickly—Black Adam is freed from his earthly tomb, ready to unleash his unique form of justice on the modern world.",
+            "poster_path": "/3zXceNTtyj5FLjwQXuPvLYK5YYL.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                14,
+                878
+            ],
+            "popularity": 4657.005,
+            "release_date": "2022-10-19",
+            "video": false,
+            "vote_average": 7.029,
+            "vote_count": 733
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3tEuJWbFjyQL2m4AlGVB1cRqn1E.jpg",
+            "id": 83659,
+            "name": "Guillermo del Toro's Cabinet of Curiosities",
+            "original_language": "en",
+            "original_name": "Guillermo del Toro's Cabinet of Curiosities",
+            "overview": "Bizarre nightmares unfold in eight tales of terror in this visually stunning, spine-tingling horror collection curated by Guillermo del Toro.",
+            "poster_path": "/a91e9hpWwfCqxJI4xM9Q2RhuxgI.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18,
+                9648
+            ],
+            "popularity": 701.004,
+            "first_air_date": "2022-10-25",
+            "vote_average": 8.252,
+            "vote_count": 117,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/rV0xrSgkOQj2EpiG8n16VHHJeg3.jpg",
+            "id": 541134,
+            "title": "The Good Nurse",
+            "original_language": "en",
+            "original_title": "The Good Nurse",
+            "overview": "Suspicious that her colleague is responsible for a series of mysterious patient deaths, a nurse risks her own life to uncover the truth in this gripping thriller based on true events.",
+            "poster_path": "/rSq6cq0LCcbro10jbEaPTEb3WmW.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                18,
+                80,
+                9648
+            ],
+            "popularity": 288.043,
+            "release_date": "2022-10-19",
+            "video": false,
+            "vote_average": 7.171,
+            "vote_count": 246
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/odJ4hx6g6vBt4lBWKFD1tI8WS4x.jpg",
+            "id": 361743,
+            "title": "Top Gun: Maverick",
+            "original_language": "en",
+            "original_title": "Top Gun: Maverick",
+            "overview": "After more than thirty years of service as one of the Navy’s top aviators, and dodging the advancement in rank that would ground him, Pete “Maverick” Mitchell finds himself training a detachment of TOP GUN graduates for a specialized mission the likes of which no living pilot has ever seen.",
+            "poster_path": "/62HCnUTziyWcpDaBO2i1DX17ljH.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                18
+            ],
+            "popularity": 1006.861,
+            "release_date": "2022-05-24",
+            "video": false,
+            "vote_average": 8.345,
+            "vote_count": 4503
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/v3Mc67AUN77h0BR9GymiPs4x96H.jpg",
+            "id": 511817,
+            "title": "Wendell & Wild",
+            "original_language": "en",
+            "original_title": "Wendell & Wild",
+            "overview": "Two demon brothers enlist the aid of Kat Elliot — a tough teen with a load of guilt — to summon them to the Land of the Living. But what Kat demands in return leads to a brilliantly bizarre and comedic adventure like no other.",
+            "poster_path": "/5dsX6UAHqkQz1kiV8bs8SvjyVNa.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                16,
+                35,
+                14,
+                12
+            ],
+            "popularity": 93.915,
+            "release_date": "2022-10-21",
+            "video": false,
+            "vote_average": 6.689,
+            "vote_count": 53
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/vHOSLDloV2bIFbHot8CM9e5YLj3.jpg",
+            "id": 111803,
+            "name": "The White Lotus",
+            "original_language": "en",
+            "original_name": "The White Lotus",
+            "overview": "Follow the exploits of various guests and employees at an exclusive tropical resort over the span of a week as with each passing day, a darker complexity emerges in these picture-perfect travelers, the hotel’s cheerful employees and the idyllic locale itself.",
+            "poster_path": "/gH5i3JbnLsyTvcImlofNvXtH3i5.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                35,
+                18,
+                9648
+            ],
+            "popularity": 98.799,
+            "first_air_date": "2021-07-11",
+            "vote_average": 7.297,
+            "vote_count": 234,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/etj8E2o0Bud0HkONVQPjyCkIvpv.jpg",
+            "id": 94997,
+            "name": "House of the Dragon",
+            "original_language": "en",
+            "original_name": "House of the Dragon",
+            "overview": "The Targaryen dynasty is at the absolute apex of its power, with more than 15 dragons under their yoke. Most empires crumble from such heights. In the case of the Targaryens, their slow fall begins when King Viserys breaks with a century of tradition by naming his daughter Rhaenyra heir to the Iron Throne. But when Viserys later fathers a son, the court is shocked when Rhaenyra retains her status as his heir, and seeds of division sow friction across the realm.",
+            "poster_path": "/z2yahl2uefxDCl0nogcRBstwruJ.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                10765,
+                18,
+                10759
+            ],
+            "popularity": 4248.865,
+            "first_air_date": "2022-08-21",
+            "vote_average": 8.517,
+            "vote_count": 2227,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/v78wDAtJOpb47NGbgdBXfx4UopY.jpg",
+            "id": 121710,
+            "name": "Inside Man",
+            "original_language": "en",
+            "original_name": "Inside Man",
+            "overview": "A prisoner on death row in the US, a vicar in a quiet English town, and a maths teacher trapped in a cellar cross paths in the most unexpected way.",
+            "poster_path": "/7tZONSnzKylgzHJvtoOGjRmYlgU.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18,
+                80,
+                9648
+            ],
+            "popularity": 12.82,
+            "first_air_date": "2022-09-26",
+            "vote_average": 7.119,
+            "vote_count": 21,
+            "origin_country": [
+                "GB"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/oKqsZr4Jq1Y3fPZ0ufgzUs2ToK2.jpg",
+            "id": 532870,
+            "title": "Run Sweetheart Run",
+            "original_language": "en",
+            "original_title": "Run Sweetheart Run",
+            "overview": "A woman runs for her life though the streets of Los Angeles after her blind date suddenly turns violent.",
+            "poster_path": "/9xf3aiAxjx2H34EwwVFFlOrr0nt.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                53,
+                9648,
+                27
+            ],
+            "popularity": 31.125,
+            "release_date": "2022-10-28",
+            "video": false,
+            "vote_average": 6.083,
+            "vote_count": 24
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/yYrvN5WFeGYjJnRzhY0QXuo4Isw.jpg",
+            "id": 505642,
+            "title": "Black Panther: Wakanda Forever",
+            "original_language": "en",
+            "original_title": "Black Panther: Wakanda Forever",
+            "overview": "Queen Ramonda, Shuri, M’Baku, Okoye and the Dora Milaje fight to protect their nation from intervening world powers in the wake of King T’Challa’s death. As the Wakandans strive to embrace their next chapter, the heroes must band together with the help of War Dog Nakia and Everett Ross and forge a new path for the kingdom of Wakanda.",
+            "poster_path": "/sv1xJUazXeYqALzczSZ3O6nkH75.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                28,
+                12,
+                878
+            ],
+            "popularity": 516.45,
+            "release_date": "2022-11-09",
+            "video": false,
+            "vote_average": 0.0,
+            "vote_count": 0
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/aTovumsNlDjof7YVoU5nW2RHaYn.jpg",
+            "id": 616820,
+            "title": "Halloween Ends",
+            "original_language": "en",
+            "original_title": "Halloween Ends",
+            "overview": "Four years after the events of Halloween in 2018, Laurie has decided to liberate herself from fear and rage and embrace life. But when a young man is accused of killing a boy he was babysitting, it ignites a cascade of violence and terror that will force Laurie to finally confront the evil she can’t control, once and for all.",
+            "poster_path": "/kFMntvUmKhvw1uAHXecqqNSFXt.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                27,
+                53
+            ],
+            "popularity": 2166.823,
+            "release_date": "2022-10-12",
+            "video": false,
+            "vote_average": 6.626,
+            "vote_count": 796
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4O9kFXsBjlxtgzXWHfgMS9CjhbN.jpg",
+            "id": 619730,
+            "title": "Don't Worry Darling",
+            "original_language": "en",
+            "original_title": "Don't Worry Darling",
+            "overview": "Alice and Jack are lucky to be living in the idealized community of Victory, the experimental company town housing the men who work for the top-secret Victory Project and their families. But when cracks in their idyllic life begin to appear, exposing flashes of something much more sinister lurking beneath the attractive façade, Alice can’t help questioning exactly what they’re doing in Victory, and why.",
+            "poster_path": "/9BXYLjXtSipBp2GfAlsri4i8hPC.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                53,
+                9648,
+                18
+            ],
+            "popularity": 1233.724,
+            "release_date": "2022-09-21",
+            "video": false,
+            "vote_average": 6.936,
+            "vote_count": 659
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/hIZFG7MK4leU4axRFKJWqrjhmxZ.jpg",
+            "id": 95403,
+            "name": "The Peripheral",
+            "original_language": "en",
+            "original_name": "The Peripheral",
+            "overview": "Stuck in a small Appalachian town, a young woman’s only escape from the daily grind is playing advanced video games. She is such a good player that a company sends her a new video game system to test…but it has a surprise in store. It unlocks all of her dreams of finding a purpose, romance, and glamour in what seems like a game…but it also puts her and her family in real danger.",
+            "poster_path": "/ccBe5BVeibdBEQU7l6P6BubajWV.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                10765,
+                18
+            ],
+            "popularity": 1112.104,
+            "first_air_date": "2022-10-20",
+            "vote_average": 8.335,
+            "vote_count": 124,
+            "origin_country": [
+                "US"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/prcjNgB6YaoYmJZaUDhKS9GJ8cG.jpg",
+            "id": 125910,
+            "name": "Young Royals",
+            "original_language": "sv",
+            "original_name": "Young Royals",
+            "overview": "Prince Wilhelm adjusts to life at his prestigious new boarding school, Hillerska, but following his heart proves more challenging than anticipated.",
+            "poster_path": "/8o3agKlXNOIjN2SdCdbjLH48GKk.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                18
+            ],
+            "popularity": 139.604,
+            "first_air_date": "2021-07-01",
+            "vote_average": 8.659,
+            "vote_count": 731,
+            "origin_country": [
+                "SE"
+            ]
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ulyR4pWVMRtVcanoassVbmgfEPT.jpg",
+            "id": 800939,
+            "title": "Ticket to Paradise",
+            "original_language": "en",
+            "original_title": "Ticket to Paradise",
+            "overview": "A divorced couple teams up and travels to Bali to stop their daughter from making the same mistake they think they made 25 years ago.",
+            "poster_path": "/1tzERH50P5c2mFWtLbgixzLZS1L.jpg",
+            "media_type": "movie",
+            "genre_ids": [
+                35,
+                10749
+            ],
+            "popularity": 178.729,
+            "release_date": "2022-09-08",
+            "video": false,
+            "vote_average": 6.836,
+            "vote_count": 180
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/qtfMr08KQsWXnCHY0a96N8NpQ2l.jpg",
+            "id": 30984,
+            "name": "Bleach",
+            "original_language": "ja",
+            "original_name": "ブリーチ",
+            "overview": "For as long as he can remember, Ichigo Kurosaki has been able to see ghosts. But when he meets Rukia, a Soul Reaper who battles evil spirits known as Hollows, he finds his life is changed forever. Now, with a newfound wealth of spiritual energy, Ichigo discovers his true calling: to protect the living and the dead from evil.",
+            "poster_path": "/2EewmxXe72ogD0EaWM8gqa0ccIw.jpg",
+            "media_type": "tv",
+            "genre_ids": [
+                10759,
+                16,
+                10765
+            ],
+            "popularity": 400.057,
+            "first_air_date": "2004-10-05",
+            "vote_average": 8.368,
+            "vote_count": 1313,
+            "origin_country": [
+                "JP"
+            ]
+        }
+    ],
+    "total_pages": 1000,
+    "total_results": 20000
+}

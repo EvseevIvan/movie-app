@@ -1,0 +1,12 @@
+platform :ios, '15.0'
+use_frameworks!
+
+target 'finalProject' do
+
+pod 'Alamofire'
+pod 'SDWebImage', '~> 5.0'
+pod "youtube-ios-player-helper"
+
+
+
+end
