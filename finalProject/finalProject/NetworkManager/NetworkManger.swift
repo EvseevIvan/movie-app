@@ -243,4 +243,110 @@ class NetworkManager {
         }
     }
     
+    // GENRE VIEWCONROLLER
+    
+    func getMovieGenreMedia(genreID: Int, completion: @escaping ([MovieResult]) -> Void) {
+            let genresRequest = AF.request("https://api.themoviedb.org/3/discover/movie?api_key=de2fa60445b65225004497a21552b0ce&with_genres=\(genreID)", method: .get)
+
+            genresRequest.responseDecodable(of: Movies.self) { response in
+                do {
+                    let data = try response.result.get().results
+                    completion(data)
+                }
+                catch {
+                    print("error: \(error)")
+                }
+            }
+        
+        }
+    
+    func getSeriesGenreMedia(genreID: Int, completion: @escaping ([SeriesResult]) -> Void) {
+            let genresRequest = AF.request("https://api.themoviedb.org/3/discover/tv?api_key=de2fa60445b65225004497a21552b0ce&with_genres=\(genreID)", method: .get)
+
+            genresRequest.responseDecodable(of: Series.self) { response in
+                do {
+                    let data = try response.result.get().results
+                    completion(data)
+                }
+                catch {
+                    print("error: \(error)")
+                }
+            }
+        
+        }
+        
+    // SEARCH VC
+    
+    func searchMovies(query: String, completion: @escaping ([MovieResult]) -> Void) {
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+        let movieRequest = AF.request("https://api.themoviedb.org/3/search/movie?api_key=de2fa60445b65225004497a21552b0ce&page=1&query=\(query)", method: .get)
+        movieRequest.responseDecodable(of: Movies.self) { responce in
+            do {
+                let data = try responce.result.get().results
+                completion(data)
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+    }
+        
+    func searchSeries(query: String, completion: @escaping ([SeriesResult]) -> Void) {
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
+        let movieRequest = AF.request("https://api.themoviedb.org/3/search/tv?api_key=de2fa60445b65225004497a21552b0ce&page=1&query=\(query)", method: .get)
+        movieRequest.responseDecodable(of: Series.self) { responce in
+            do {
+                let data = try responce.result.get().results
+                completion(data)
+                
+            } catch {
+                print(error)
+            }
+        }
+        
+    }
+    
+    // WATCHLIST VIEWCONTROLLER
+    
+    func getMoviesWatchlist(completion: @escaping ([MovieResult]) -> Void) {
+            let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist/movies?api_key=de2fa60445b65225004497a21552b0ce&language=en-US&session_id=\(sessionID)&sort_by=created_at.asc&page=1", method: .get)
+                genresRequest.responseDecodable(of: Movies.self) { response in
+                    do {
+                        let data = try response.result.get().results
+                        completion(data)
+
+                    }
+                    catch {
+                        print("error: \(error)")
+                    }
+                }
+        }
+    func getSeriesWatchlist(completion: @escaping ([SeriesResult]) -> Void) {
+            let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist/tv?api_key=de2fa60445b65225004497a21552b0ce&language=en-US&session_id=\(sessionID)&sort_by=created_at.asc&page=1", method: .get)
+                genresRequest.responseDecodable(of: Series.self) { response in
+                    do {
+                        let data = try response.result.get().results
+                        completion(data)
+
+                    }
+                    catch {
+                        print("error: \(error)")
+                    }
+                }
+        }
+
+    
+    func deleteFromWatchlist(mediaId: Int, mediaType: String, completion: @escaping () -> Void) {
+            let params: Parameters = [
+                "media_type": mediaType,
+                "media_id": mediaId,
+                "watchlist": false
+              ]
+        let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist?api_key=de2fa60445b65225004497a21552b0ce&session_id=\(sessionID)", method: .post, parameters: params, encoding: JSONEncoding.default)
+            genresRequest.responseDecodable(of: WatchList.self) { response in }
+        }
+
+        
+    
 }

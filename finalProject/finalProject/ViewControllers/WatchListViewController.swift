@@ -11,9 +11,9 @@ import Alamofire
 class WatchListViewController: UIViewController {
     
     @IBOutlet weak var watchListTableView: UITableView!
-    var arrayOfMoviesWatchList: [MovieResult] = []
-    var arrayOfSeriesWatchList: [SeriesResult] = []
-
+//    var arrayOfMoviesWatchList: [MovieResult] = []
+//    var arrayOfSeriesWatchList: [SeriesResult] = []
+    let viewModel = WatchListViewControllerViewModel()
     var mediaID = 0
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -36,8 +36,12 @@ class WatchListViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getWatchlist(mediaType: "movies")
-        getWatchlist(mediaType: "tv")
+        viewModel.getMoviesWachList {
+            self.watchListTableView.reloadData()
+        }
+        viewModel.getSeriesWachList {
+            self.watchListTableView.reloadData()
+        }
     }
     
     @IBAction func segmentedPressed(_ sender: Any) {
@@ -46,45 +50,45 @@ class WatchListViewController: UIViewController {
     }
     
     
-    func getWatchlist(mediaType: String) {
-            let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist/\(mediaType)?api_key=de2fa60445b65225004497a21552b0ce&language=en-US&session_id=\(sessionID)&sort_by=created_at.asc&page=1", method: .get)
-            if mediaType == "movies" {
-                genresRequest.responseDecodable(of: Movies.self) { response in
-                    do {
-                        self.arrayOfMoviesWatchList = try response.result.get().results
-                        self.watchListTableView.reloadData()
-
-                    }
-                    catch {
-                        print("error: \(error)")
-                    }
-                }
-            } else {
-                genresRequest.responseDecodable(of: Series.self) { response in
-                    do {
-                        self.arrayOfSeriesWatchList = try response.result.get().results
-                        self.watchListTableView.reloadData()
-
-                    }
-                    catch {
-                        print("error: \(error)")
-                    }
-                }
-
-            }
-
-        }
-
-    
-    func deleteFromWatchlist(mediaId: Int, mediaType: String) {
-            let params: Parameters = [
-                "media_type": mediaType,
-                "media_id": mediaId,
-                "watchlist": false
-              ]
-        let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist?api_key=de2fa60445b65225004497a21552b0ce&session_id=\(sessionID)", method: .post, parameters: params, encoding: JSONEncoding.default)
-            genresRequest.responseDecodable(of: WatchList.self) { response in }
-        }
+//    func getWatchlist(mediaType: String) {
+//            let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist/\(mediaType)?api_key=de2fa60445b65225004497a21552b0ce&language=en-US&session_id=\(sessionID)&sort_by=created_at.asc&page=1", method: .get)
+//            if mediaType == "movies" {
+//                genresRequest.responseDecodable(of: Movies.self) { response in
+//                    do {
+//                        self.arrayOfMoviesWatchList = try response.result.get().results
+//                        self.watchListTableView.reloadData()
+//
+//                    }
+//                    catch {
+//                        print("error: \(error)")
+//                    }
+//                }
+//            } else {
+//                genresRequest.responseDecodable(of: Series.self) { response in
+//                    do {
+//                        self.arrayOfSeriesWatchList = try response.result.get().results
+//                        self.watchListTableView.reloadData()
+//
+//                    }
+//                    catch {
+//                        print("error: \(error)")
+//                    }
+//                }
+//
+//            }
+//
+//        }
+//
+//
+//    func deleteFromWatchlist(mediaId: Int, mediaType: String) {
+//            let params: Parameters = [
+//                "media_type": mediaType,
+//                "media_id": mediaId,
+//                "watchlist": false
+//              ]
+//        let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist?api_key=de2fa60445b65225004497a21552b0ce&session_id=\(sessionID)", method: .post, parameters: params, encoding: JSONEncoding.default)
+//            genresRequest.responseDecodable(of: WatchList.self) { response in }
+//        }
     
 
 }
@@ -95,9 +99,9 @@ extension WatchListViewController: UITableViewDelegate, UITableViewDataSource {
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            return arrayOfMoviesWatchList.count
+            return viewModel.arrayOfMoviesWatchList.count
         case 1:
-            return arrayOfSeriesWatchList.count
+            return viewModel.arrayOfSeriesWatchList.count
         default:
             return 1
         }
@@ -109,15 +113,15 @@ extension WatchListViewController: UITableViewDelegate, UITableViewDataSource {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             let cell = watchListTableView.dequeueReusableCell(withIdentifier: "WatchListTableViewCell", for: indexPath) as! WatchListTableViewCell
-            cell.configureMovies(with: arrayOfMoviesWatchList[indexPath.row])
+            cell.configureMovies(with: viewModel.arrayOfMoviesWatchList[indexPath.row])
             return cell
         case 1:
             let cell = watchListTableView.dequeueReusableCell(withIdentifier: "WatchListTableViewCell", for: indexPath) as! WatchListTableViewCell
-            cell.configureSeries(with: arrayOfSeriesWatchList[indexPath.row])
+            cell.configureSeries(with: viewModel.arrayOfSeriesWatchList[indexPath.row])
             return cell
         default:
             let cell = watchListTableView.dequeueReusableCell(withIdentifier: "WatchListTableViewCell", for: indexPath) as! WatchListTableViewCell
-            cell.configureSeries(with: arrayOfSeriesWatchList[indexPath.row])
+            cell.configureSeries(with: viewModel.arrayOfSeriesWatchList[indexPath.row])
             return cell
         }
         
@@ -141,16 +145,20 @@ extension WatchListViewController: UITableViewDelegate, UITableViewDataSource {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             let remove = UIContextualAction(style: .normal, title: "Delete") {_,_,_ in
-                self.deleteFromWatchlist(mediaId: self.arrayOfMoviesWatchList[indexPath.row].id, mediaType: "movie")
-                self.arrayOfMoviesWatchList.remove(at: indexPath.row)
+                self.viewModel.deleteFromWatchList(mediaID: self.viewModel.arrayOfMoviesWatchList[indexPath.row].id, mediaType: "movie") {
+                    tableView.reloadData()
+                }
+                self.viewModel.arrayOfMoviesWatchList.remove(at: indexPath.row)
                 self.watchListTableView.reloadData()
             }
             remove.backgroundColor = .red
             return UISwipeActionsConfiguration(actions: [remove])
         case 1:
             let remove = UIContextualAction(style: .normal, title: "Delete") {_,_,_ in
-                self.deleteFromWatchlist(mediaId: self.arrayOfSeriesWatchList[indexPath.row].id, mediaType: "tv")
-                self.arrayOfSeriesWatchList.remove(at: indexPath.row)
+                self.viewModel.deleteFromWatchList(mediaID: self.viewModel.arrayOfSeriesWatchList[indexPath.row].id, mediaType: "tv") {
+                    tableView.reloadData()
+                }
+                self.viewModel.arrayOfSeriesWatchList.remove(at: indexPath.row)
                 self.watchListTableView.reloadData()
             }
             remove.backgroundColor = .red
@@ -166,17 +174,17 @@ extension WatchListViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureMovie(with: arrayOfMoviesWatchList[indexPath.row])
+            viewController.configureMovie(with: viewModel.arrayOfMoviesWatchList[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         case 1:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureSeries(with: arrayOfSeriesWatchList[indexPath.row])
+            viewController.configureSeries(with: viewModel.arrayOfSeriesWatchList[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         default:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureMovie(with: arrayOfMoviesWatchList[indexPath.row])
+            viewController.configureMovie(with: viewModel.arrayOfMoviesWatchList[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         }
     }

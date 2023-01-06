@@ -289,7 +289,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "GenreViewController") as! GenreViewController
                 viewController.typeOfMedia = "movie"
-                viewController.getGenreMedia(mediaType: "movie", genreID: viewModel.arrayOfMovieGenresList[indexPath.row].id)
+                viewController.viewModel.getMovieMediaByGenre(genreID: self.viewModel.arrayOfMovieGenresList[indexPath.row].id) {
+                    viewController.tableView?.reloadData()
+                }
 
                 
                 self.navigationController?.pushViewController(viewController, animated: true)
@@ -325,8 +327,9 @@ extension ViewController: UICollectionViewDelegate, UICollectionViewDataSource {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storyboard.instantiateViewController(withIdentifier: "GenreViewController") as! GenreViewController
                 viewController.typeOfMedia = "tv"
-                viewController.getGenreMedia(mediaType: "tv", genreID: viewModel.arrayOfTVGenresList[indexPath.row].id)
-                
+                viewController.viewModel.getSeriesMediaByGenre(genreID: self.viewModel.arrayOfTVGenresList[indexPath.row].id) {
+                    viewController.tableView?.reloadData()
+                }
                 self.navigationController?.pushViewController(viewController, animated: true)
             } else if indexPath.section == 1 {
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)

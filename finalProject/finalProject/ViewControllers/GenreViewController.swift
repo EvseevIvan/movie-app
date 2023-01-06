@@ -11,10 +11,9 @@ import Alamofire
 class GenreViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    var arrayOfMovies: [MovieResult] = []
-    var arrayOfSeries: [SeriesResult] = []
+
     var typeOfMedia: String = ""
-    
+    let viewModel = GenreViewControllerViewModel()
 
 
     override func viewDidLoad() {
@@ -22,39 +21,13 @@ class GenreViewController: UIViewController {
         
         let nib = UINib(nibName: "WatchListTableViewCell", bundle: nil)
         self.tableView.register(nib, forCellReuseIdentifier: "WatchListTableViewCell")
-
+        
     }
+    
     
     @IBAction func backToTopPressed(_ sender: Any) {
         tableView.setContentOffset(.zero, animated: true)
     }
-    
-    func getGenreMedia(mediaType: String, genreID: Int) {
-            let genresRequest = AF.request("https://api.themoviedb.org/3/discover/\(typeOfMedia)?api_key=de2fa60445b65225004497a21552b0ce&with_genres=\(genreID)", method: .get)
-        if mediaType == "movie" {
-            genresRequest.responseDecodable(of: Movies.self) { response in
-                do {
-                    self.arrayOfMovies = try response.result.get().results
-                    self.tableView.reloadData()
-                }
-                catch {
-                    print("error: \(error)")
-                }
-            }
-        } else {
-            genresRequest.responseDecodable(of: Series.self) { response in
-                do {
-                    self.arrayOfSeries = try response.result.get().results
-                    self.tableView.reloadData()
-                }
-                catch {
-                    print("error: \(error)")
-                }
-            }
-        }
-        
-
-        }
     
 
 }
@@ -64,10 +37,10 @@ extension GenreViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WatchListTableViewCell", for: indexPath) as! WatchListTableViewCell
         
         if typeOfMedia == "movie" {
-            cell.configureMovies(with: arrayOfMovies[indexPath.row])
+            cell.configureMovies(with: viewModel.arrayOfMovies[indexPath.row])
             return cell
         } else {
-            cell.configureSeries(with: arrayOfSeries[indexPath.row])
+            cell.configureSeries(with: viewModel.arrayOfSeries[indexPath.row])
             return cell
         }
         
@@ -78,9 +51,9 @@ extension GenreViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if typeOfMedia == "movie" {
-            return arrayOfMovies.count
+            return viewModel.arrayOfMovies.count
         } else {
-            return arrayOfSeries.count
+            return viewModel.arrayOfSeries.count
         }
     }
     
@@ -92,12 +65,12 @@ extension GenreViewController: UITableViewDataSource, UITableViewDelegate {
         if typeOfMedia == "movie" {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureMovie(with: arrayOfMovies[indexPath.row])
+            viewController.configureMovie(with: viewModel.arrayOfMovies[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         } else {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureSeries(with: arrayOfSeries[indexPath.row])
+            viewController.configureSeries(with: viewModel.arrayOfSeries[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         }
         

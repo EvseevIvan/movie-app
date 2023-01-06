@@ -11,11 +11,8 @@ import Alamofire
 class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchBar: UISearchBar!
-    var arrayOfSearchedMovies: [MovieResult] = []
-    var arrayOfSearchedSeries: [SeriesResult] = []
     @IBOutlet weak var segmentedControl: UISegmentedControl!
-    
-    var filteredArrayOfNames: [String] = []
+    let viewModel = SearchViewControllerViewModel()
     var isSearching = false
     @IBOutlet weak var tableView: UITableView!
     
@@ -36,33 +33,6 @@ class SearchViewController: UIViewController {
         tableView.reloadData()
         segmentedControl.changeUnderlinePosition()
     }
-    
-    
-    func search(query: String, mediaType: String) {
-            guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
-            let movieRequest = AF.request("https://api.themoviedb.org/3/search/\(mediaType)?api_key=de2fa60445b65225004497a21552b0ce&page=1&query=\(query)", method: .get)
-        if mediaType == "tv" {
-            movieRequest.responseDecodable(of: Series.self) { responce in
-                do {
-                    self.arrayOfSearchedSeries = try responce.result.get().results
-                    self.tableView.reloadData()
-       
-                } catch {
-                    print(error)
-                }
-            }
-        } else {
-            movieRequest.responseDecodable(of: Movies.self) { responce in
-                    do {
-                        self.arrayOfSearchedMovies = try responce.result.get().results
-                        self.tableView.reloadData()
-           
-                    } catch {
-                        print(error)
-                    }
-                }
-           }
-        }
 
     
 }
@@ -74,23 +44,28 @@ extension SearchViewController: UISearchBarDelegate {
         
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            self.filteredArrayOfNames.removeAll()
+            viewModel.filteredArrayOfNames.removeAll()
             guard let query = searchBar.text else { return }
-            search(query: query.trimmingCharacters(in: .whitespaces), mediaType: "movie")
+            viewModel.searchMovies(query: query.trimmingCharacters(in: .whitespaces)) {
+                self.tableView.reloadData()
+            }
+            
             
             if query == "" {
-                arrayOfSearchedMovies.removeAll()
+                viewModel.arrayOfSearchedMovies.removeAll()
                 tableView.reloadData()
             } else {
                 return
             }
         case 1:
-            self.filteredArrayOfNames.removeAll()
+            viewModel.filteredArrayOfNames.removeAll()
             guard let query = searchBar.text else { return }
-            search(query: query.trimmingCharacters(in: .whitespaces), mediaType: "tv")
+            viewModel.searchSeries(query: query.trimmingCharacters(in: .whitespaces)) {
+                self.tableView.reloadData()
+            }
             
             if query == "" {
-                arrayOfSearchedSeries.removeAll()
+                viewModel.arrayOfSearchedSeries.removeAll()
                 tableView.reloadData()
             } else {
                 return
@@ -107,9 +82,9 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
-            return arrayOfSearchedMovies.count
+            return viewModel.arrayOfSearchedMovies.count
         case 1:
-            return arrayOfSearchedSeries.count
+            return viewModel.arrayOfSearchedSeries.count
         default:
             return 20
         }
@@ -120,11 +95,11 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         switch segmentedControl.selectedSegmentIndex {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "WatchListTableViewCell", for: indexPath) as! WatchListTableViewCell
-            cell.configureMovies(with: arrayOfSearchedMovies[indexPath.row])
+            cell.configureMovies(with: viewModel.arrayOfSearchedMovies[indexPath.row])
             return cell
         case 1:
             let cell = tableView.dequeueReusableCell(withIdentifier: "WatchListTableViewCell", for: indexPath) as! WatchListTableViewCell
-            cell.configureSeries(with: arrayOfSearchedSeries[indexPath.row])
+            cell.configureSeries(with: viewModel.arrayOfSearchedSeries[indexPath.row])
             return cell
         default:
             return UITableViewCell()
@@ -139,17 +114,17 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
         case 0:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureMovie(with: arrayOfSearchedMovies[indexPath.row])
+            viewController.configureMovie(with: viewModel.arrayOfSearchedMovies[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         case 1:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureSeries(with: arrayOfSearchedSeries[indexPath.row])
+            viewController.configureSeries(with: viewModel.arrayOfSearchedSeries[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         default:
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             guard let viewController = storyboard.instantiateViewController(withIdentifier: "FilmViewController") as? FilmViewController else { return }
-            viewController.configureMovie(with: arrayOfSearchedMovies[indexPath.row])
+            viewController.configureMovie(with: viewModel.arrayOfSearchedMovies[indexPath.row])
             self.navigationController?.pushViewController(viewController, animated: true)
         }
 

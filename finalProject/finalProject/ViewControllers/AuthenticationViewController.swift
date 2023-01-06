@@ -73,6 +73,7 @@ class AuthenticationViewController: UIViewController {
     @IBAction func pressedLogin(_ sender: Any) {
         viewModel.makeSession(username: loginField.text ?? "" , password: passwordField.text ?? "") { success in
             if success {
+                userName = self.loginField.text ?? ""
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 let nextController = storyboard.instantiateViewController(withIdentifier: "TapBar")
                 nextController.modalPresentationStyle = .fullScreen
