@@ -11,8 +11,6 @@ import Alamofire
 class WatchListViewController: UIViewController {
     
     @IBOutlet weak var watchListTableView: UITableView!
-//    var arrayOfMoviesWatchList: [MovieResult] = []
-//    var arrayOfSeriesWatchList: [SeriesResult] = []
     let viewModel = WatchListViewControllerViewModel()
     var mediaID = 0
     @IBOutlet weak var segmentedControl: UISegmentedControl!

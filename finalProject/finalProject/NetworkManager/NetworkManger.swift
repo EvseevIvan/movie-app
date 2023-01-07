@@ -347,6 +347,29 @@ class NetworkManager {
             genresRequest.responseDecodable(of: WatchList.self) { response in }
         }
 
-        
+    // FILM VC
+    
+    func getTrailers(mediaID: Int, mediaType: String, completion: @escaping([Trailer]) -> Void) {
+            let genresRequest = AF.request("https://api.themoviedb.org/3/\(mediaType)/\(mediaID)/videos?api_key=de2fa60445b65225004497a21552b0ce&language=en-US", method: .get)
+            genresRequest.responseDecodable(of: Trailers.self) { response in
+                do {
+                    let data = try response.result.get().results
+                    completion(data)
+                }
+                catch {
+                    print("error: \(error)")
+                }
+            }
+        }
+    
+    func addToWatchList(mediaType: String, mediaID: Int) {
+            let params: Parameters = [
+                "media_type": mediaType,
+                "media_id": mediaID,
+                "watchlist": true
+              ]
+            let genresRequest = AF.request("https://api.themoviedb.org/3/account/\(accounID)/watchlist?api_key=de2fa60445b65225004497a21552b0ce&session_id=\(sessionID)", method: .post, parameters: params)
+            genresRequest.responseDecodable(of: WatchList.self) { response in }
+        }
     
 }
