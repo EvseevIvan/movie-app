@@ -40,17 +40,17 @@ class FilmViewControllerViewModel {
         completion()
     }
     
-    func getMoviesWatchList(completion: @escaping () -> Void) {
+    func getMoviesWatchList(completion: @escaping ([MovieResult]) -> Void) {
         NetworkManager().getMoviesWatchlist { media in
             self.arrayOfMoviesWatchList = media
+            completion(media)
         }
-        completion()
     }
     func getSeriesWatchList(completion: @escaping () -> Void) {
         NetworkManager().getSeriesWatchlist { media in
             self.arrayOfSeriesWatchList = media
+            completion()
         }
-        completion()
     }
     
     func getGenres(mediaType: String, completion: @escaping () -> Void) {
@@ -60,8 +60,8 @@ class FilmViewControllerViewModel {
             } else {
                 self.arrayOfTVGenresList = media
             }
+            completion()
         }
-        completion()
     }
 
     

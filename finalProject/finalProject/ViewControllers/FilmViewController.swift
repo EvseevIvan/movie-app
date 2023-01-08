@@ -23,6 +23,7 @@ class FilmViewController: UIViewController {
     @IBOutlet weak var filmOverview: UILabel!
     
     
+    
     var mediaID: Int = 0
     
     var isItMovie = true
@@ -54,65 +55,29 @@ class FilmViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        if isItMovie == true {
-            viewModel.getMoviesWatchList {
-                for film in self.viewModel.arrayOfMoviesWatchList {
-                    if film.title == self.viewModel.nameOfFilm {
-                        print("lol")
-                        self.addToWatchList.backgroundColor = .red
-                        self.addToWatchList.setTitle("Remove from favorites", for: UIControl.State.normal)
-                    } else {
-                        print("sdfsdf")
-                        self.viewModel.deleteFromWatchlist(mediaID: self.mediaID, mediaType: "movie") {
-                            self.addToWatchList.backgroundColor = .green
-                            self.addToWatchList.setTitle("Add to favourites", for: UIControl.State.normal)
-                        }
 
-                    }
+        
+        viewModel.getMoviesWatchList { media in
+            if media.count == 0 {
+                self.addToWatchList.backgroundColor = .green
+                self.addToWatchList.setTitle("Add to favourites", for: UIControl.State.normal)
+            }
+            for film in media {
+                if self.mediaID == film.id {
+                    self.addToWatchList.backgroundColor = .red
+                    self.addToWatchList.setTitle("Remove from favorites", for: UIControl.State.normal)
+                    return
+                } else {
+                    self.addToWatchList.backgroundColor = .green
+                    self.addToWatchList.setTitle("Add to favourites", for: UIControl.State.normal)
                 }
             }
-        } else {
-            viewModel.getSeriesWatchList {
-                for film in self.viewModel.arrayOfSeriesWatchList {
-                    if film.name == self.viewModel.nameOfFilm {
-                        print("lol")
-                        self.addToWatchList.backgroundColor = .red
-                        self.addToWatchList.setTitle("Remove from favorites", for: UIControl.State.normal)
-                    } else {
-                        print("sdfsdf")
-                        self.viewModel.deleteFromWatchlist(mediaID: self.mediaID, mediaType: "movie") {
-                            self.addToWatchList.backgroundColor = .green
-                            self.addToWatchList.setTitle("Add to favourites", for: UIControl.State.normal)
-                        }
-
-                    }
-                }
-            }
-
         }
 
     }
     
     
     func configureMovie(with film: MovieResult) {
-        
-        viewModel.getGenres(mediaType: "movie") {
-            for genre in self.viewModel.arrayOfMovieGenresList {
-                if film.genreIDS[0] == genre.id {
-                    self.viewModel.genreOfFilm = "🎭: \(genre.name)"
-                }
-            }
-        }
-        
-        viewModel.getMoviesWatchList() {
-            for watchListFilm in self.viewModel.arrayOfMoviesWatchList {
-                if watchListFilm.title == film.title {
-                    self.addToWatchList.backgroundColor = .red
-                    self.addToWatchList.setTitle("Remove from favorites", for: UIControl.State.normal)
-                }
-            }
-        }
-        
 
         let year: String = film.releaseDate ?? ""
         viewModel.imageOfFilm = film.posterPath
@@ -122,9 +87,24 @@ class FilmViewController: UIViewController {
         viewModel.overviewOfFilm = film.overview
         mediaID = film.id
         isItMovie = true
+        
+//        viewModel.getMoviesWatchList() { media in
+//            for watchListFilm in self.viewModel.arrayOfMoviesWatchList {
+//                if watchListFilm.title == film.title {
+//                    self.addToWatchList.backgroundColor = .red
+//                    self.addToWatchList.setTitle("Remove from favorites", for: UIControl.State.normal)
+//                }
+//            }
+//        }
 
-
-
+        viewModel.getGenres(mediaType: "movie") {
+            for genre in self.viewModel.arrayOfMovieGenresList {
+                if film.genreIDS[0] == genre.id {
+                    self.viewModel.genreOfFilm = "🎭: \(genre.name)"
+                }
+            }
+        }
+        
         viewModel.getTrailers(mediaType: "movie", mediaID: film.id) {
             self.trailerPlayer.load(withVideoId: self.viewModel.arrayOfTrilers[0].key)
         }

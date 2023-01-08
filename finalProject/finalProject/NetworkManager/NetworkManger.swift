@@ -372,4 +372,5 @@ class NetworkManager {
             genresRequest.responseDecodable(of: WatchList.self) { response in }
         }
     
+    
 }
