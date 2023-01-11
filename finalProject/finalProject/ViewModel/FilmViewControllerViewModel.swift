@@ -57,10 +57,11 @@ class FilmViewControllerViewModel {
         NetworkManager().getGenres(mediaType: mediaType) { media in
             if mediaType == "movie" {
                 self.arrayOfMovieGenresList = media
+                completion()
             } else {
                 self.arrayOfTVGenresList = media
+                completion()
             }
-            completion()
         }
     }
 

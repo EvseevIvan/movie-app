@@ -87,20 +87,11 @@ class FilmViewController: UIViewController {
         viewModel.overviewOfFilm = film.overview
         mediaID = film.id
         isItMovie = true
-        
-//        viewModel.getMoviesWatchList() { media in
-//            for watchListFilm in self.viewModel.arrayOfMoviesWatchList {
-//                if watchListFilm.title == film.title {
-//                    self.addToWatchList.backgroundColor = .red
-//                    self.addToWatchList.setTitle("Remove from favorites", for: UIControl.State.normal)
-//                }
-//            }
-//        }
 
         viewModel.getGenres(mediaType: "movie") {
             for genre in self.viewModel.arrayOfMovieGenresList {
-                if film.genreIDS[0] == genre.id {
-                    self.viewModel.genreOfFilm = "🎭: \(genre.name)"
+                if genre.id == film.genreIDS[0] {
+                    self.filmGenre.text = "🎭: \(genre.name)"
                 }
             }
         }
@@ -119,15 +110,15 @@ class FilmViewController: UIViewController {
         isItMovie = false
         viewModel.yearOfFilm = "📆: \(film.firstAirDate)"
         
-        viewModel.getSeriesWatchList {
-            for watchListFilm in self.viewModel.arrayOfMoviesWatchList {
-                if watchListFilm.name == film.name {
-                    self.addToWatchList.backgroundColor = .red
-                    self.addToWatchList.setTitle("Remove from favorites", for: UIControl.State.normal)
+        viewModel.getGenres(mediaType: "tv") {
+            for genre in self.viewModel.arrayOfTVGenresList {
+                print(genre)
+                if genre.id == film.genreIDS[0] {
+                    self.filmGenre.text = "🎭: \(genre.name)"
                 }
             }
         }
-
+        
         viewModel.getTrailers(mediaType: "tv", mediaID: film.id) {
             self.trailerPlayer.load(withVideoId: self.viewModel.arrayOfTrilers[0].key)
         }
