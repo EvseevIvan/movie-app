@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Exo2-Bold.ttf</string>
+	</array>
 </dict>
 </plist>

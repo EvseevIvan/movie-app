@@ -12,6 +12,8 @@ var isItGuestSession: Bool = false
 
 class AuthenticationViewController: UIViewController {
     
+    @IBOutlet weak var backImage: UIImageView!
+    @IBOutlet weak var shadowOnImageView: UIView!
     @IBOutlet weak var loginField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -24,8 +26,15 @@ class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
         loginButton.tintColor = .red
-        textFieldStyle(textField: loginField)
-        textFieldStyle(textField: passwordField)
+        textFieldStyle(textField: loginField, plaseHolderText: "Your username")
+        textFieldStyle(textField: passwordField, plaseHolderText: "Your password")
+        showPasswordButton.tintColor = UIColor(red: 0.231, green: 0.38, blue: 1, alpha: 1)
+        
+        
+
+        
+        loginButton.layer.backgroundColor = UIColor(red: 0.231, green: 0.38, blue: 1, alpha: 1).cgColor
+        loginButton.layer.cornerRadius = 9
         
         
 
@@ -40,16 +49,22 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
-    func textFieldStyle(textField: UITextField) {
+    func textFieldStyle(textField: UITextField, plaseHolderText: String) {
         let bottomLine = CALayer()
         bottomLine.frame = CGRect(x: 0,
                                   y: textField.frame.height - 2,
                                   width: textField.frame.width,
-                                  height: 1)
-        bottomLine.backgroundColor = UIColor.red.cgColor
+                                  height: 2)
+        bottomLine.backgroundColor = UIColor(red: 0.231, green: 0.38, blue: 1, alpha: 1).cgColor
         textField.borderStyle = .none
         textField.layer.addSublayer(bottomLine)
-        UITextField.appearance().tintColor = .red
+        UITextField.appearance().tintColor = .white
+        textField.textColor = .white
+        let redPlaceholderText = NSAttributedString(string: "\(plaseHolderText)",
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+                
+        textField.attributedPlaceholder = redPlaceholderText
+        
     }
 
     
@@ -90,5 +105,6 @@ class AuthenticationViewController: UIViewController {
     
     
 }
+
 
 

@@ -22,7 +22,7 @@
 		072F4E948C001AB0237B1A4916221043 /* UIAccessibilityIdentification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E33FDEFC0F6B55EAB9253025AACE0750 /* UIAccessibilityIdentification.swift */; };
 		07A41F67B40B3C6C6C3DB862F1F633F8 /* SDWebImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 7467EBF19221D06DE658F4201439208E /* SDWebImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		088AEF4BE55DB3DDA26D02D0B22EBB68 /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 552A295EF8C7F81731067E20D7BC4153 /* Subscription.swift */; };
-		08E06C696103054C4B32302B72F87F9B /* youtube-ios-player-helper-Assets in Resources */ = {isa = PBXBuildFile; fileRef = D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */; };
+		08E06C696103054C4B32302B72F87F9B /* Assets.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D674200BB0575198145B5455CF13275F /* Assets.bundle */; };
 		096136D3ACC13F87234B89CC7F9BA344 /* NestedBatchUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2453DEE73CC59F9DEF8E4313083C5425 /* NestedBatchUpdate.swift */; };
 		0A89AA380008B6B9AD8E4A429D52541D /* ExecutionContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4307DF4108B0AB2D39B66AEF457B6B48 /* ExecutionContext.swift */; };
 		0BFA90EFCD3407716FFC60D140325188 /* UIImageView+WebCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 77AC9AEA9FBCA5DD1C60EF7A92EAEA2C /* UIImageView+WebCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -445,7 +445,7 @@
 		0A3B392A626E8232B19A629C4AECD439 /* SDMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDMemoryCache.m; path = SDWebImage/Core/SDMemoryCache.m; sourceTree = "<group>"; };
 		0BE3A4B29866A4FD60A04BE0EBE99471 /* UIPickerView+DataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPickerView+DataSource.swift"; path = "Sources/Bond/UIKit/UIPickerView+DataSource.swift"; sourceTree = "<group>"; };
 		0C80841658AFA95D5260A2C5762C0BFA /* SDWebImageManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SDWebImageManager.m; path = SDWebImage/Core/SDWebImageManager.m; sourceTree = "<group>"; };
-		0C8D08A139550277DBB95A9C90558E40 /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; includeInIndex = 1; name = "YTPlayerView-iframe-player.html"; path = "Sources/Assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
+		0C8D08A139550277DBB95A9C90558E40 /* YTPlayerView-iframe-player.html */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.html; name = "YTPlayerView-iframe-player.html"; path = "Sources/Assets/YTPlayerView-iframe-player.html"; sourceTree = "<group>"; };
 		0CE6D2D8A1B76FECC9BFC9237235B5F9 /* Property+ChangesetContainerProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Property+ChangesetContainerProtocol.swift"; path = "Sources/Bond/Observable Collections/Property+ChangesetContainerProtocol.swift"; sourceTree = "<group>"; };
 		0E0C5BE6D6688684B381D8CD980374D0 /* URLRequest+Alamofire.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "URLRequest+Alamofire.swift"; path = "Source/URLRequest+Alamofire.swift"; sourceTree = "<group>"; };
 		0E78E5F06ABCC7B6639F37E441BE0725 /* UIButton+WebCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIButton+WebCache.h"; path = "SDWebImage/Core/UIButton+WebCache.h"; sourceTree = "<group>"; };
@@ -667,7 +667,7 @@
 		9B2F7F90F3AD80420BA280D59BEEF19F /* GenericPatch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GenericPatch.swift; path = Sources/Differ/GenericPatch.swift; sourceTree = "<group>"; };
 		9C2EFD99238B522DD1739CA57FA246FC /* Demand.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Demand.swift; path = Sources/Subscribers/Demand.swift; sourceTree = "<group>"; };
 		9D5D244DAE22F98522A1B0EB0B11AEBE /* MainBlockDisposable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainBlockDisposable.swift; path = Sources/Bond/MainBlockDisposable.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E5AD2C813D6E2E31E2BDCFAC843F08B /* Alamofire-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Alamofire-dummy.m"; sourceTree = "<group>"; };
 		9E5F6C63BBAB5A60862B7E067B771531 /* Bond */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Bond; path = Bond.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E71A07658861CF6A7B0F588E6320B29 /* Diff.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Diff.swift; path = Sources/Differ/Diff.swift; sourceTree = "<group>"; };
@@ -742,7 +742,7 @@
 		D528F8D8AECA6F9F68D6395A9DB62E44 /* Observable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Observable.swift; path = Sources/Bond/Observable.swift; sourceTree = "<group>"; };
 		D5BEE8B1AAFD82FD526AD8EAA0352FDC /* UITextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UITextField.swift; path = Sources/Bond/UIKit/UITextField.swift; sourceTree = "<group>"; };
 		D62A729853DCB101BF59A8E727DB86C1 /* SDImageCachesManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SDImageCachesManager.h; path = SDWebImage/Core/SDImageCachesManager.h; sourceTree = "<group>"; };
-		D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "youtube-ios-player-helper-Assets"; path = Assets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		D674200BB0575198145B5455CF13275F /* Assets.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Assets.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		D6A0A6BCE448626D0FA803644A88A22F /* UIStepper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIStepper.swift; path = Sources/Bond/UIKit/UIStepper.swift; sourceTree = "<group>"; };
 		D7251AD030E3EC71DFE653713985245A /* AuthenticationInterceptor.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AuthenticationInterceptor.swift; path = Source/AuthenticationInterceptor.swift; sourceTree = "<group>"; };
 		D937341A7E2211BEF84CE3818B42C88E /* TreeView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TreeView.swift; path = "Sources/Bond/Data Structures/TreeView.swift"; sourceTree = "<group>"; };
@@ -896,7 +896,6 @@
 				5A117E90FACE6F151988693FBA4DE084 /* Patch+Sort.swift */,
 				D86C4D68BDFCE241F113A4E5AA9D4371 /* Support Files */,
 			);
-			name = Differ;
 			path = Differ;
 			sourceTree = "<group>";
 		};
@@ -946,7 +945,6 @@
 				516FEACE9A2ADB7D685697767F831C7D /* Core */,
 				051C1FBEF2C87687E2D983A12DC7FC9C /* Support Files */,
 			);
-			name = SDWebImage;
 			path = SDWebImage;
 			sourceTree = "<group>";
 		};
@@ -958,7 +956,6 @@
 				D244700E349ACF053560F2B9F045B6AC /* Resources */,
 				77E4F5D895FCC3FA6F9D5EB23315F623 /* Support Files */,
 			);
-			name = "youtube-ios-player-helper";
 			path = "youtube-ios-player-helper";
 			sourceTree = "<group>";
 		};
@@ -1049,7 +1046,6 @@
 				7CCE5FCA64D7EBFC7F51CEF1A455F69A /* ViewControllerLifecycle.swift */,
 				516D674DD15CEBD6BCF1676775B59C48 /* Support Files */,
 			);
-			name = Bond;
 			path = Bond;
 			sourceTree = "<group>";
 		};
@@ -1279,7 +1275,7 @@
 				EE64B414D0662BDC3A4919CDA3BC3A49 /* ReactiveKit */,
 				B0B214D775196BA7CA8E17E53048A493 /* SDWebImage */,
 				8498A1B2C60117E181CA67921DDAE0B6 /* youtube-ios-player-helper */,
-				D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */,
+				D674200BB0575198145B5455CF13275F /* Assets.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1325,7 +1321,6 @@
 				0569E37722815F2D5F255A0A41C8ADF4 /* Validation.swift */,
 				8E4385F4DC20E9228AE71B00E64E025C /* Support Files */,
 			);
-			name = Alamofire;
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
@@ -1407,7 +1402,6 @@
 				5C796DBA7F6B7E50757DDB4C4EB7543D /* TimelaneCore.swift */,
 				F4EBA5D27302B60BA68C90871FF79D63 /* Support Files */,
 			);
-			name = ReactiveKit;
 			path = ReactiveKit;
 			sourceTree = "<group>";
 		};
@@ -1631,7 +1625,7 @@
 			);
 			name = "youtube-ios-player-helper-Assets";
 			productName = Assets;
-			productReference = D674200BB0575198145B5455CF13275F /* youtube-ios-player-helper-Assets */;
+			productReference = D674200BB0575198145B5455CF13275F /* Assets.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 		3847153A6E5EEFB86565BA840768F429 /* SDWebImage */ = {
@@ -1792,7 +1786,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				08E06C696103054C4B32302B72F87F9B /* youtube-ios-player-helper-Assets in Resources */,
+				08E06C696103054C4B32302B72F87F9B /* Assets.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2307,6 +2301,7 @@
 			baseConfigurationReference = 58A3A6828A2585E7EF1B2233C18B5623 /* youtube-ios-player-helper.release.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
+				DEVELOPMENT_TEAM = FM4L546M2P;
 				IBSC_MODULE = youtube_ios_player_helper;
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -2800,6 +2795,7 @@
 			baseConfigurationReference = 89D0DB31A4AC3A8265A77BCBA7A45F53 /* youtube-ios-player-helper.debug.xcconfig */;
 			buildSettings = {
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/youtube-ios-player-helper";
+				DEVELOPMENT_TEAM = FM4L546M2P;
 				IBSC_MODULE = youtube_ios_player_helper;
 				INFOPLIST_FILE = "Target Support Files/youtube-ios-player-helper/ResourceBundle-Assets-youtube-ios-player-helper-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

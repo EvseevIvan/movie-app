@@ -19,6 +19,7 @@ class FilmCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         rateView.layer.cornerRadius = 25
+        backView.backgroundColor = UIColor.clear
     }
     
     func configure(with film: MovieResult) {

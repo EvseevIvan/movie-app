@@ -16,6 +16,7 @@ var userName: String = ""
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var backView: UIView!
     @IBOutlet weak var filmCollectionView: UICollectionView!
     @IBOutlet weak var segmentedControl: UISegmentedControl!
     
@@ -24,12 +25,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        filmCollectionView.backgroundColor = UIColor.clear
+        
         let nib = UINib(nibName: "FilmCell", bundle: nil)
         self.filmCollectionView.register(nib, forCellWithReuseIdentifier: "FilmCell")
         let nib2 = UINib(nibName: "CollectionReusableView", bundle: nil)
         self.filmCollectionView.register(nib2, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "CollectionReusableView")
         let nib3 = UINib(nibName: "GenreCollectionViewCell", bundle: nil)
         self.filmCollectionView.register(nib3, forCellWithReuseIdentifier: "GenreCollectionViewCell")
+        
+        backView.backgroundColor = UIColor(red: 0.039, green: 0.063, blue: 0.161, alpha: 1)
+        
         
         viewModel.getTrandingMovies {
             self.filmCollectionView.reloadData()

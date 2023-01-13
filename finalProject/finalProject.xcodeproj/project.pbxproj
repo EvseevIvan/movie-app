@@ -40,6 +40,26 @@
 		44D3DB08292D39B5001D20B8 /* CollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 44D3DB06292D39B5001D20B8 /* CollectionReusableView.xib */; };
 		44DD3F942937B854005704D4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44DD3F932937B854005704D4 /* SearchViewController.swift */; };
 		44FEA7132965CAF000CF180C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44FEA7122965CAF000CF180C /* AuthenticationViewModel.swift */; };
+		8623DC0C2971999F005F84E2 /* Exo2-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DBFA2971999F005F84E2 /* Exo2-Bold.ttf */; };
+		8623DC2929719A92005F84E2 /* Exo2-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC1A29719A92005F84E2 /* Exo2-ThinItalic.ttf */; };
+		8623DC2A29719A92005F84E2 /* Exo2-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC1B29719A92005F84E2 /* Exo2-MediumItalic.ttf */; };
+		8623DC2B29719A92005F84E2 /* Exo2-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC1C29719A92005F84E2 /* Exo2-Italic.ttf */; };
+		8623DC2C29719A92005F84E2 /* Exo2-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC1D29719A92005F84E2 /* Exo2-SemiBoldItalic.ttf */; };
+		8623DC2D29719A92005F84E2 /* Exo2-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC1E29719A92005F84E2 /* Exo2-Medium.ttf */; };
+		8623DC2E29719A92005F84E2 /* Exo2-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC1F29719A92005F84E2 /* Exo2-SemiBold.ttf */; };
+		8623DC2F29719A92005F84E2 /* Exo2-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2029719A92005F84E2 /* Exo2-Thin.ttf */; };
+		8623DC3029719A92005F84E2 /* Exo2-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2129719A92005F84E2 /* Exo2-ExtraLightItalic.ttf */; };
+		8623DC3129719A92005F84E2 /* Exo2-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2229719A92005F84E2 /* Exo2-LightItalic.ttf */; };
+		8623DC3229719A92005F84E2 /* Exo2-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2329719A92005F84E2 /* Exo2-ExtraLight.ttf */; };
+		8623DC3329719A92005F84E2 /* Exo2-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2429719A92005F84E2 /* Exo2-Light.ttf */; };
+		8623DC3429719A92005F84E2 /* Exo2-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2529719A92005F84E2 /* Exo2-BoldItalic.ttf */; };
+		8623DC3529719A92005F84E2 /* Exo2-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2629719A92005F84E2 /* Exo2-Regular.ttf */; };
+		8623DC3629719A92005F84E2 /* Exo2-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2729719A92005F84E2 /* Exo2-ExtraBold.ttf */; };
+		8623DC3729719A92005F84E2 /* Exo2-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC2829719A92005F84E2 /* Exo2-ExtraBoldItalic.ttf */; };
+		8623DC3A29719AA1005F84E2 /* Exo2-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC3829719AA1005F84E2 /* Exo2-BlackItalic.ttf */; };
+		8623DC3B29719AA1005F84E2 /* Exo2-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8623DC3929719AA1005F84E2 /* Exo2-Black.ttf */; };
+		86EF14E12971DFC600C5897F /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF14E02971DFC600C5897F /* CustomTabBarController.swift */; };
+		86EF14E32971E2E700C5897F /* CustomTapBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86EF14E22971E2E700C5897F /* CustomTapBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -78,6 +98,26 @@
 		44D3DB06292D39B5001D20B8 /* CollectionReusableView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionReusableView.xib; sourceTree = "<group>"; };
 		44DD3F932937B854005704D4 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		44FEA7122965CAF000CF180C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
+		8623DBFA2971999F005F84E2 /* Exo2-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Bold.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-Bold.ttf"; sourceTree = "<group>"; };
+		8623DC1A29719A92005F84E2 /* Exo2-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ThinItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-ThinItalic.ttf"; sourceTree = "<group>"; };
+		8623DC1B29719A92005F84E2 /* Exo2-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-MediumItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-MediumItalic.ttf"; sourceTree = "<group>"; };
+		8623DC1C29719A92005F84E2 /* Exo2-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Italic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-Italic.ttf"; sourceTree = "<group>"; };
+		8623DC1D29719A92005F84E2 /* Exo2-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-SemiBoldItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		8623DC1E29719A92005F84E2 /* Exo2-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Medium.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-Medium.ttf"; sourceTree = "<group>"; };
+		8623DC1F29719A92005F84E2 /* Exo2-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-SemiBold.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-SemiBold.ttf"; sourceTree = "<group>"; };
+		8623DC2029719A92005F84E2 /* Exo2-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Thin.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-Thin.ttf"; sourceTree = "<group>"; };
+		8623DC2129719A92005F84E2 /* Exo2-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraLightItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		8623DC2229719A92005F84E2 /* Exo2-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-LightItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-LightItalic.ttf"; sourceTree = "<group>"; };
+		8623DC2329719A92005F84E2 /* Exo2-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraLight.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-ExtraLight.ttf"; sourceTree = "<group>"; };
+		8623DC2429719A92005F84E2 /* Exo2-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Light.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-Light.ttf"; sourceTree = "<group>"; };
+		8623DC2529719A92005F84E2 /* Exo2-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-BoldItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-BoldItalic.ttf"; sourceTree = "<group>"; };
+		8623DC2629719A92005F84E2 /* Exo2-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Regular.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-Regular.ttf"; sourceTree = "<group>"; };
+		8623DC2729719A92005F84E2 /* Exo2-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraBold.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-ExtraBold.ttf"; sourceTree = "<group>"; };
+		8623DC2829719A92005F84E2 /* Exo2-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-ExtraBoldItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		8623DC3829719AA1005F84E2 /* Exo2-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-BlackItalic.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-BlackItalic.ttf"; sourceTree = "<group>"; };
+		8623DC3929719AA1005F84E2 /* Exo2-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Exo2-Black.ttf"; path = "../../../../../Downloads/Exo 2/Exo2-Black.ttf"; sourceTree = "<group>"; };
+		86EF14E02971DFC600C5897F /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		86EF14E22971E2E700C5897F /* CustomTapBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTapBar.swift; sourceTree = "<group>"; };
 		91E70741F72BFC911EAD8748 /* Pods_finalProject.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_finalProject.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACC8E70AA35D7427382CD4B5 /* Pods-finalProject.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-finalProject.debug.xcconfig"; path = "Target Support Files/Pods-finalProject/Pods-finalProject.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +203,7 @@
 		4497D52B2911ABC900FD5658 /* finalProject */ = {
 			isa = PBXGroup;
 			children = (
+				8623DBF529719978005F84E2 /* Fonts */,
 				4479AF6B2964956B0051D573 /* ViewModel */,
 				4479AF682964954B0051D573 /* NetworkManager */,
 				44B2E52A2947A8B200BE491E /* Cells */,
@@ -177,6 +218,8 @@
 				4497D53A2911ABCB00FD5658 /* Info.plist */,
 				4497D54C2911B93400FD5658 /* Podfile */,
 				4497D5352911ABCB00FD5658 /* Assets.xcassets */,
+				86EF14E02971DFC600C5897F /* CustomTabBarController.swift */,
+				86EF14E22971E2E700C5897F /* CustomTapBar.swift */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -231,6 +274,31 @@
 				91E70741F72BFC911EAD8748 /* Pods_finalProject.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8623DBF529719978005F84E2 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				8623DC2529719A92005F84E2 /* Exo2-BoldItalic.ttf */,
+				8623DC2729719A92005F84E2 /* Exo2-ExtraBold.ttf */,
+				8623DC2829719A92005F84E2 /* Exo2-ExtraBoldItalic.ttf */,
+				8623DC2329719A92005F84E2 /* Exo2-ExtraLight.ttf */,
+				8623DC3929719AA1005F84E2 /* Exo2-Black.ttf */,
+				8623DC3829719AA1005F84E2 /* Exo2-BlackItalic.ttf */,
+				8623DC2129719A92005F84E2 /* Exo2-ExtraLightItalic.ttf */,
+				8623DC1C29719A92005F84E2 /* Exo2-Italic.ttf */,
+				8623DC2429719A92005F84E2 /* Exo2-Light.ttf */,
+				8623DC2229719A92005F84E2 /* Exo2-LightItalic.ttf */,
+				8623DC1E29719A92005F84E2 /* Exo2-Medium.ttf */,
+				8623DC1B29719A92005F84E2 /* Exo2-MediumItalic.ttf */,
+				8623DC2629719A92005F84E2 /* Exo2-Regular.ttf */,
+				8623DC1F29719A92005F84E2 /* Exo2-SemiBold.ttf */,
+				8623DC1D29719A92005F84E2 /* Exo2-SemiBoldItalic.ttf */,
+				8623DC2029719A92005F84E2 /* Exo2-Thin.ttf */,
+				8623DC1A29719A92005F84E2 /* Exo2-ThinItalic.ttf */,
+				8623DBFA2971999F005F84E2 /* Exo2-Bold.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -293,14 +361,32 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8623DC3629719A92005F84E2 /* Exo2-ExtraBold.ttf in Resources */,
 				4481F4CC29411E1E00FC4F41 /* WatchListTableViewCell.xib in Resources */,
+				8623DC3729719A92005F84E2 /* Exo2-ExtraBoldItalic.ttf in Resources */,
 				440103CD2912F9020095BD47 /* FilmCell.xib in Resources */,
+				8623DC3B29719AA1005F84E2 /* Exo2-Black.ttf in Resources */,
+				8623DC2E29719A92005F84E2 /* Exo2-SemiBold.ttf in Resources */,
+				8623DC3529719A92005F84E2 /* Exo2-Regular.ttf in Resources */,
 				44D3DB08292D39B5001D20B8 /* CollectionReusableView.xib in Resources */,
+				8623DC3A29719AA1005F84E2 /* Exo2-BlackItalic.ttf in Resources */,
+				8623DC3229719A92005F84E2 /* Exo2-ExtraLight.ttf in Resources */,
 				44985BC3296879B5009DBD56 /* Main.storyboard in Resources */,
+				8623DC3129719A92005F84E2 /* Exo2-LightItalic.ttf in Resources */,
 				4497D5392911ABCB00FD5658 /* LaunchScreen.storyboard in Resources */,
+				8623DC2D29719A92005F84E2 /* Exo2-Medium.ttf in Resources */,
+				8623DC2F29719A92005F84E2 /* Exo2-Thin.ttf in Resources */,
+				8623DC0C2971999F005F84E2 /* Exo2-Bold.ttf in Resources */,
 				442D2A01294F7E1D00E4B53A /* GenreCollectionViewCell.xib in Resources */,
+				8623DC3029719A92005F84E2 /* Exo2-ExtraLightItalic.ttf in Resources */,
+				8623DC3329719A92005F84E2 /* Exo2-Light.ttf in Resources */,
+				8623DC2929719A92005F84E2 /* Exo2-ThinItalic.ttf in Resources */,
+				8623DC2B29719A92005F84E2 /* Exo2-Italic.ttf in Resources */,
+				8623DC2C29719A92005F84E2 /* Exo2-SemiBoldItalic.ttf in Resources */,
 				4497D5362911ABCB00FD5658 /* Assets.xcassets in Resources */,
 				4497D54D2911B93400FD5658 /* Podfile in Resources */,
+				8623DC3429719A92005F84E2 /* Exo2-BoldItalic.ttf in Resources */,
+				8623DC2A29719A92005F84E2 /* Exo2-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,12 +445,14 @@
 				44638D9E293FB0DC00121AE1 /* Authentication.swift in Sources */,
 				4497D52D2911ABC900FD5658 /* AppDelegate.swift in Sources */,
 				44929F4129698DC90022B2D9 /* FilmViewControllerViewModel.swift in Sources */,
+				86EF14E32971E2E700C5897F /* CustomTapBar.swift in Sources */,
 				44DD3F942937B854005704D4 /* SearchViewController.swift in Sources */,
 				4497D52F2911ABC900FD5658 /* SceneDelegate.swift in Sources */,
 				4479AF6A296495660051D573 /* NetworkManger.swift in Sources */,
 				4479AF6D296495970051D573 /* ViewControllerViewModel.swift in Sources */,
 				44AB492B294FC19800B53086 /* Genres.swift in Sources */,
 				4481F4C529411D5800FC4F41 /* WatchListViewController.swift in Sources */,
+				86EF14E12971DFC600C5897F /* CustomTabBarController.swift in Sources */,
 				44AD4C94293CDA4700BFAEEA /* AuthenticationViewController.swift in Sources */,
 				44985BC1296871E6009DBD56 /* GenreViewControllerViewModel.swift in Sources */,
 				4497D54A2911B74C00FD5658 /* Models.swift in Sources */,
