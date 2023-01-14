@@ -204,22 +204,17 @@
 			isa = PBXGroup;
 			children = (
 				8623DBF529719978005F84E2 /* Fonts */,
-				4479AF6B2964956B0051D573 /* ViewModel */,
 				4479AF682964954B0051D573 /* NetworkManager */,
-				44B2E52A2947A8B200BE491E /* Cells */,
-				44AD4C92293CD9CD00BFAEEA /* ViewControllers */,
 				4497D5432911ACFE00FD5658 /* Models */,
+				86D9035029732AC60060A310 /* Views */,
+				4479AF6B2964956B0051D573 /* ViewModel */,
+				44AD4C92293CD9CD00BFAEEA /* ViewControllers */,
 				4497D52C2911ABC900FD5658 /* AppDelegate.swift */,
 				4497D52E2911ABC900FD5658 /* SceneDelegate.swift */,
-				44D3DB05292D39B5001D20B8 /* CollectionReusableView.swift */,
-				44D3DB06292D39B5001D20B8 /* CollectionReusableView.xib */,
-				4497D5372911ABCB00FD5658 /* LaunchScreen.storyboard */,
 				44985BC2296879B5009DBD56 /* Main.storyboard */,
 				4497D53A2911ABCB00FD5658 /* Info.plist */,
 				4497D54C2911B93400FD5658 /* Podfile */,
 				4497D5352911ABCB00FD5658 /* Assets.xcassets */,
-				86EF14E02971DFC600C5897F /* CustomTabBarController.swift */,
-				86EF14E22971E2E700C5897F /* CustomTapBar.swift */,
 			);
 			path = finalProject;
 			sourceTree = "<group>";
@@ -238,13 +233,8 @@
 		44AD4C92293CD9CD00BFAEEA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				44409744292F410A0019CC39 /* ViewController.swift */,
-				44DD3F932937B854005704D4 /* SearchViewController.swift */,
-				4441D4B5292211D800B34729 /* FilmViewController.swift */,
-				44AD4C93293CDA4700BFAEEA /* AuthenticationViewController.swift */,
-				4481F4C429411D5800FC4F41 /* WatchListViewController.swift */,
-				44B2E5272947A6CB00BE491E /* GenreViewController.swift */,
-				44CA64832953B3C800F50AC6 /* SettingsViewController.swift */,
+				86D9035229732B0D0060A310 /* Other */,
+				86D9035129732AEC0060A310 /* Core */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -299,6 +289,40 @@
 				8623DBFA2971999F005F84E2 /* Exo2-Bold.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		86D9035029732AC60060A310 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				44B2E52A2947A8B200BE491E /* Cells */,
+				4497D5372911ABCB00FD5658 /* LaunchScreen.storyboard */,
+				86EF14E22971E2E700C5897F /* CustomTapBar.swift */,
+				86EF14E02971DFC600C5897F /* CustomTabBarController.swift */,
+				44D3DB06292D39B5001D20B8 /* CollectionReusableView.xib */,
+				44D3DB05292D39B5001D20B8 /* CollectionReusableView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		86D9035129732AEC0060A310 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				44CA64832953B3C800F50AC6 /* SettingsViewController.swift */,
+				4481F4C429411D5800FC4F41 /* WatchListViewController.swift */,
+				44DD3F932937B854005704D4 /* SearchViewController.swift */,
+				44409744292F410A0019CC39 /* ViewController.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		86D9035229732B0D0060A310 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				44B2E5272947A6CB00BE491E /* GenreViewController.swift */,
+				44AD4C93293CDA4700BFAEEA /* AuthenticationViewController.swift */,
+				4441D4B5292211D800B34729 /* FilmViewController.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
