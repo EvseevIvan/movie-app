@@ -12,9 +12,19 @@ var isItGuestSession: Bool = false
 
 class AuthenticationViewController: UIViewController {
     
-    @IBOutlet weak var backImage: UIImageView!
+    var backImage: UIImageView = {
+        let view = UIImageView()
+        view.image = UIImage(named: "backImage")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
     @IBOutlet weak var shadowOnImageView: UIView!
-    @IBOutlet weak var loginField: UITextField!
+    var loginField: UITextField = {
+        let field = UITextField()
+        field.textFieldStyle(plaseHolderText: "Your username")
+        field.translatesAutoresizingMaskIntoConstraints = false
+        return field
+    }()
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var showPasswordButton: UIButton!
@@ -26,11 +36,9 @@ class AuthenticationViewController: UIViewController {
         super.viewDidLoad()
         passwordField.isSecureTextEntry = true
         loginButton.tintColor = .red
-        textFieldStyle(textField: loginField, plaseHolderText: "Your username")
-        textFieldStyle(textField: passwordField, plaseHolderText: "Your password")
         showPasswordButton.tintColor = UIColor(red: 0.231, green: 0.38, blue: 1, alpha: 1)
         
-        
+        passwordField.textFieldStyle(plaseHolderText: "KLFJDKFJ")
 
         
         loginButton.layer.backgroundColor = UIColor(red: 0.231, green: 0.38, blue: 1, alpha: 1).cgColor
@@ -38,6 +46,38 @@ class AuthenticationViewController: UIViewController {
         
         
 
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        setupConstraints()
+    
+    }
+    
+    func setupConstraints() {
+        
+        view.addSubview(backImage)
+        view.addSubview(loginField)
+        
+        NSLayoutConstraint.activate([
+            backImage.topAnchor.constraint(equalTo: view.topAnchor, constant: -5), // прибить к верху
+            backImage.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: -5), // прибить влево
+            backImage.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 5), // прибить вниз
+            backImage.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 5), // прибить вправо
+            
+//            backImage.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            
+            loginField.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            loginField.widthAnchor.constraint(equalToConstant: view.frame.width - 70),
+            loginField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -100),
+            loginField.heightAnchor.constraint(equalToConstant: 30)
+            
+            
+            
+            
+            
+        ])
+        
     }
     
 
@@ -49,23 +89,7 @@ class AuthenticationViewController: UIViewController {
         }
     }
     
-    func textFieldStyle(textField: UITextField, plaseHolderText: String) {
-        let bottomLine = CALayer()
-        bottomLine.frame = CGRect(x: 0,
-                                  y: textField.frame.height - 2,
-                                  width: textField.frame.width,
-                                  height: 2)
-        bottomLine.backgroundColor = UIColor(red: 0.231, green: 0.38, blue: 1, alpha: 1).cgColor
-        textField.borderStyle = .none
-        textField.layer.addSublayer(bottomLine)
-        UITextField.appearance().tintColor = .white
-        textField.textColor = .white
-        let redPlaceholderText = NSAttributedString(string: "\(plaseHolderText)",
-                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
-                
-        textField.attributedPlaceholder = redPlaceholderText
-        
-    }
+
 
     
     
@@ -106,5 +130,25 @@ class AuthenticationViewController: UIViewController {
     
 }
 
+
+extension UITextField {
+    func textFieldStyle(plaseHolderText: String) {
+        let bottomLine = CALayer()
+        bottomLine.frame = CGRect(x: 0,
+                                  y: self.frame.height - 2,
+                                  width: self.frame.width,
+                                  height: 2)
+        bottomLine.backgroundColor = UIColor(red: 0.231, green: 0.38, blue: 1, alpha: 1).cgColor
+        self.borderStyle = .none
+        self.layer.addSublayer(bottomLine)
+        UITextField.appearance().tintColor = .white
+        self.textColor = .white
+        let redPlaceholderText = NSAttributedString(string: "\(plaseHolderText)",
+                                                            attributes: [NSAttributedString.Key.foregroundColor: UIColor.lightGray])
+                
+        self.attributedPlaceholder = redPlaceholderText
+        
+    }
+}
 
 

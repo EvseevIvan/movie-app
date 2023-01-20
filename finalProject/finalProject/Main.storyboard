@@ -290,16 +290,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backImage" translatesAutoresizingMaskIntoConstraints="NO" id="eaR-9B-1pu">
-                                <rect key="frame" x="-4" y="0.0" width="422" height="896"/>
-                            </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JMD-Dq-rFm">
-                                <rect key="frame" x="20" y="355" width="374" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Exo2-Medium" family="Exo 2" pointSize="18"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mzp-Xx-IeJ">
                                 <rect key="frame" x="20" y="431" width="374" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -370,16 +360,9 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wZe-38-2tn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="eaR-9B-1pu" firstAttribute="top" secondItem="aLe-fH-dfs" secondAttribute="top" id="GiJ-yk-TMM"/>
-                            <constraint firstItem="eaR-9B-1pu" firstAttribute="leading" secondItem="aLe-fH-dfs" secondAttribute="leading" constant="-4" id="UMb-AG-bz2"/>
-                            <constraint firstAttribute="bottom" secondItem="eaR-9B-1pu" secondAttribute="bottom" id="ppB-4B-tb1"/>
-                            <constraint firstAttribute="trailing" secondItem="eaR-9B-1pu" secondAttribute="trailing" constant="-4" id="zZd-JF-1lC"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="loginButton" destination="tkW-Mi-cYP" id="8zB-Pg-VlS"/>
-                        <outlet property="loginField" destination="JMD-Dq-rFm" id="1GY-ui-3JX"/>
                         <outlet property="passwordField" destination="mzp-Xx-IeJ" id="aaF-s7-ZwJ"/>
                         <outlet property="showPasswordButton" destination="Lsj-h5-twk" id="xeq-cE-ys4"/>
                         <outlet property="successLoginLabel" destination="KId-GY-jw7" id="fd4-nv-hhZ"/>
@@ -623,7 +606,6 @@
         </designable>
     </designables>
     <resources>
-        <image name="backImage" width="376" height="813"/>
         <image name="chevron.up.circle" catalog="system" width="128" height="123"/>
         <image name="eye" catalog="system" width="128" height="79"/>
         <image name="heart" catalog="system" width="128" height="107"/>
